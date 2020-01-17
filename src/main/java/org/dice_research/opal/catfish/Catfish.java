@@ -77,7 +77,6 @@ public class Catfish implements JenaModelProcessor {
 
 		// When date is in the format 01.01.1949 - 31.12.2017 take the latest.
 		else if ((datasetUri.matches(date1_date1)) || (datasetUri.matches(date1_date2))) {
-			// System.out.println(datasetUri);
 			String new_date = datasetUri.contains("-") ? checkDate(datasetUri.split("-")[1].trim(), "dd.MM.yyyy")
 					: checkDate(datasetUri.split("�")[1].trim(), "dd.MM.yyyy");
 			new_dates.add(new_date);
