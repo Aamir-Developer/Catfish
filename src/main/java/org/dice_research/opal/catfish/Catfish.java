@@ -39,8 +39,6 @@ public class Catfish implements JenaModelProcessor {
 	String day_month_date_time = "\\w{3}\\s\\w{3}\\s\\d{2}\\s\\d{2}[:]\\d{2}[:]\\d{2}\\s\\w{3}\\s\\d{4}$";
 
 	static String checkDate(String invalid_date, String invalid_date_format) throws ParseException {
-		System.out.println("check invalid_date" + invalid_date);
-		System.out.println("check invalid_date_format" + invalid_date_format);
 		String valid_date = "";
 		String valid_date_format = "yyyy-MM-dd";
 
