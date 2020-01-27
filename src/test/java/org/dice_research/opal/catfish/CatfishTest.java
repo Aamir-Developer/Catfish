@@ -11,6 +11,7 @@ public class CatfishTest {
 	/**
 	 * Tests, if model is empty.
 	 */
+	@SuppressWarnings("deprecation")
 	@Test
 	public void checkEmpty() throws Exception {
 		Model model = ModelFactory.createDefaultModel();
@@ -24,6 +25,7 @@ public class CatfishTest {
 	}
 
 //2018-07-09T09:40:19.518623
+	@SuppressWarnings("deprecation")
 	@Test
 	public void dateTimeZone1() throws Exception {
 		Model model = ModelFactory.createDefaultModel();
@@ -36,6 +38,7 @@ public class CatfishTest {
 	}
 
 	// 2018-07-09 09:40:19.518623
+	@SuppressWarnings("deprecation")
 	@Test
 	public void dateTimeZone2() throws Exception {
 		Model model = ModelFactory.createDefaultModel();
@@ -48,6 +51,7 @@ public class CatfishTest {
 	}
 
 	// Date format 31.12.1990
+	@SuppressWarnings("deprecation")
 	@Test
 	public void dd_mm_yyyy() throws Exception {
 		Model model = ModelFactory.createDefaultModel();
@@ -60,6 +64,7 @@ public class CatfishTest {
 	}
 
 	// 01.01.1949 - 31.12.2017
+	@SuppressWarnings("deprecation")
 	@Test
 	public void date1_date1() throws Exception {
 		Model model = ModelFactory.createDefaultModel();
@@ -72,18 +77,19 @@ public class CatfishTest {
 	}
 
 	// 01.01.1949 — 31.12.2017
+	@SuppressWarnings("deprecation")
 	@Test
 	public void date1_date2() throws Exception {
 		Model model = ModelFactory.createDefaultModel();
 		String datasetUri = "01.01.1949 — 31.12.2017";
 
 		new Catfish().process(model, datasetUri);
-
 		Assert.assertEquals("date1_date2 format", 0, model.size());
 
 	}
 
 	// Dec 31 23:00:00 GMT 2005 — Sun Dec 31 22:59:59 GMT 2006
+	@SuppressWarnings("deprecation")
 	@Test
 	public void day_month_date_time_day_month_date_time() throws Exception {
 		Model model = ModelFactory.createDefaultModel();
@@ -96,6 +102,7 @@ public class CatfishTest {
 	}
 
 	// Tue Mar 19 00:00:00 GMT 2019
+	@SuppressWarnings("deprecation")
 	@Test
 	public void day_month_date_time() throws Exception {
 		Model model = ModelFactory.createDefaultModel();
